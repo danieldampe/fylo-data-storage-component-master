@@ -1,0 +1,86 @@
+/* 
+// *** *** *** Custom Properties *** *** *** 
+*/
+:root {
+    --width-mobile-layout: 375px;
+    --width-desktop-layout: 1440px;
+    --font-family: "Raleway", sans-serif;
+    --font-size: 14px;
+    --color-gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+    --color-pale-blue: hsl(243, 100%, 93%);
+    --color-grayish-blue: hsl(229, 7%, 55%);
+    --color-dark-blue: hsl(228, 56%, 26%);
+    --color-very-dark-blue: hsl(229, 57%, 11%);
+}
+
+/* 
+// *** *** *** Reset *** *** *** 
+*/
+html {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after { box-sizing: inherit; }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+a { text-decoration: none; }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+hr {
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+/* 
+// *** *** *** Site Styles *** *** *** 
+*/
+#root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+}
+
+.footer { 
+    padding: 1rem; 
+    color: var(--color-pale-blue);
+}
+
+/*  
+// *** *** *** Desktop Layout *** *** ***
+*/
+@media screen and (min-width: 1000px) {
+    #root { 
+        background-image: url(../images/bg-desktop.png); 
+        background-size: contain;
+        background-position: bottom;
+        background-color: var(--color-very-dark-blue);
+    }
+}

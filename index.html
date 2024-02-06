@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components/fylo-data-storage.css">
+    <style>
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body>
+    <!-- HTML -->
+    <div id="root">
+        <main id="main" class="main"></main>
+        <footer class="footer attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/danieldampe" target="_blank">danieldampe</a>.
+        </footer>
+    </div>
+    <!-- Components -->
+    <template id="fylo-data-storage-component">
+        <div class="fylo-data-storage">
+            <div class="fylo-data-storage-header">
+                <img src="./images/logo.svg" alt="Logo" class="fylo-data-storage-header__logo">
+                <div class="fylo-data-storage-header__div">
+                    <div class="fylo-data-storage-header-div__icon">
+                        <img src="./images/icon-document.svg" alt="Icon-document" class="fylo-data-storage-header-div-icon__img">
+                    </div>
+                    <div class="fylo-data-storage-header-div__icon">
+                        <img src="./images/icon-folder.svg" alt="Icon Folder" class="fylo-data-storage-header-div-icon__img">
+                    </div>
+                    <div class="fylo-data-storage-header-div__icon">
+                        <img src="./images/icon-upload.svg" alt="Icon Upload" class="fylo-data-storage-header-div-icon__img">
+                    </div>
+                </div>
+            </div>
+            <div class="fylo-data-storage-main">
+                <div class="fylo-data-storage-main-inner">
+                    <div class="fylo-data-storage-main__txt">
+                        You’ve used
+                        <span class="fylo-data-storage-main-txt__span" data-used></span>
+                        of your storage
+                    </div>
+                    <div class="fylo-data-storage-main__bar">
+                        <div class="fylo-data-storage-main-bar__indicator" data-indicator></div>
+                    </div>
+                    <div class="fylo-data-storage-main__div">
+                        <div class="fylo-data-storage-main-div__min" data-min></div>
+                        <div class="fylo-data-storage-main-div__max" data-max></div>
+                    </div>
+                    <div class="fylo-data-storage-main__left">
+                        <span class="fylo-data-storage-main-left__span" data-left></span> 
+                        GB LEFT
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- JS -->
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>

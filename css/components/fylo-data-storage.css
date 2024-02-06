@@ -1,0 +1,166 @@
+/* 
+// *** *** *** Fylo Data Storage *** *** ***
+*/
+.fylo-data-storage {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.fylo-data-storage-header,
+.fylo-data-storage-main {
+    padding: 3rem;
+    border-radius: 15px;
+    background-color: var(--color-dark-blue);
+}
+
+@media screen and (min-width: 1000px) {
+    .fylo-data-storage { 
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 2.5rem; 
+    }
+
+    .fylo-data-storage-header { flex-basis: 35%; }
+    .fylo-data-storage-main { flex-grow: 1; } 
+}
+
+/* 
+// *** *** *** Header *** *** ***
+*/
+.fylo-data-storage-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    border-top-right-radius: calc(15px * 6);
+    background-color: var(--color-dark-blue);
+}
+
+.fylo-data-storage-header__div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fylo-data-storage-header-div__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    background-color: var(--color-very-dark-blue);
+}
+
+/* 
+// *** *** *** Main *** *** ***
+*/
+.fylo-data-storage-main {
+    position: relative;
+    padding-bottom: calc(3rem * 1.5);
+    color: var(--color-pale-blue);
+}
+
+.fylo-data-storage-main-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fylo-data-storage-main-div__min,
+.fylo-data-storage-main-div__max,
+.fylo-data-storage-main-txt__span { 
+    font-weight: bold; 
+}
+
+.fylo-data-storage-main__txt { text-align: center; }
+
+.fylo-data-storage-main__bar {
+    padding: 0.2rem;
+    border-radius: 15px;
+    background-color: var(--color-very-dark-blue);
+}
+
+.fylo-data-storage-main-bar__indicator {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: min-content;
+    padding: inherit;
+    border-radius: inherit;
+    background-image: linear-gradient(to right, var(--color-gradient));
+}
+
+.fylo-data-storage-main-bar__indicator::before {
+    content: "";
+    display: inline-block;
+    width: 0.8rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--color-pale-blue);
+}
+
+.fylo-data-storage-main__div {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 1000px) {
+    .fylo-data-storage-main { position: static; }
+    .fylo-data-storage-main-inner { position: relative; }
+    .fylo-data-storage-main { padding-bottom: 3rem; }
+    .fylo-data-storage-main__txt { text-align: left; }
+}
+
+/* 
+// *** *** *** Left *** *** ***
+*/
+.fylo-data-storage-main__left { 
+    position: absolute; 
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: max-content;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--color-grayish-blue);
+    background-color: #fff;
+}
+
+.fylo-data-storage-main-left__span {
+    font-size: 3rem;
+    color: var(--color-very-dark-blue);
+}
+
+@media screen and (min-width: 1000px) {
+    .fylo-data-storage-main__left { 
+        top: 0;
+        left: auto;
+        bottom: auto;
+        right: 0;
+        transform: none;
+        transform: translateY(-100%);
+        border-bottom-right-radius: 0;
+    }
+
+    .fylo-data-storage-main__left::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateY(100%);
+        width: 1.5rem;
+        aspect-ratio: 1 / 1;
+        background-color: inherit;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+}
